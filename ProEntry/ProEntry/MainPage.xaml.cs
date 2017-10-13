@@ -12,6 +12,12 @@ namespace ProEntry
 		public MainPage()
 		{
 			InitializeComponent();
+
+            TestNativeEntry.Completed += TestNativeEntry_Completed;
 		}
-	}
+
+        private void TestNativeEntry_Completed(object sender, EventArgs e) {
+            EventTestLabel.Text = TestNativeEntry.Text;
+        }
+    }
 }
